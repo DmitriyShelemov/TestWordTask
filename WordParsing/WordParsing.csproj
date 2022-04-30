@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>WordParsing.Logic</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspose.Words" Version="22.4.0" />
+    <PackageReference Include="Yandex.Cloud.SDK" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>
