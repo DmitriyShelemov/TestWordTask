@@ -1,6 +1,7 @@
 ﻿using CommandLine;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using WordParsing.Logic;
 
@@ -21,10 +22,10 @@ namespace WordParsing
                     IWordParsingService parsingService = new WordParsingService(new AsposeWrapper());
 
                     var invalid = false;
-
-                    if (!parsingService.ValidateFile(o.FilePath))
+                    var fullPath = Path.GetFullPath(o.FilePath);
+                    if (!parsingService.ValidateFile(fullPath))
                     {
-                        Console.WriteLine($"File path is incorrect '{o.FilePath}'");
+                        Console.WriteLine($"File path is incorrect '{fullPath}'");
                         invalid = true;
                     }
 
@@ -49,7 +50,7 @@ namespace WordParsing
                     {
                         try
                         {
-                            var nodes = parsingService.GetNodes(o.FilePath);
+                            var nodes = parsingService.GetNodes(fullPath);
                             var texts = parsingService.GetTexts(nodes);
 
                             if (!texts.Any())

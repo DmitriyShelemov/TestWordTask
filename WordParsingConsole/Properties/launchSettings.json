@@ -2,7 +2,7 @@
   "profiles": {
     "WordParsingConsole": {
       "commandName": "Project",
-      "commandLineArgs": "-f \"en\" -t  \"ru\" -p \"C:\\Users\\Dmitriy.Shelemov\\Desktop\\React\\WordParsing\\alice.doc\""
+      "commandLineArgs": "-f \"en\" -t  \"ru\" -p \"..\\..\\..\\..\\madhatter_notes.docx\""
     }
   }
 }
